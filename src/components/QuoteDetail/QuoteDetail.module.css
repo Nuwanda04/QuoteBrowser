@@ -1,0 +1,149 @@
+.quoteDetail {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.quoteCard {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  text-align: center;
+}
+
+.quoteContent {
+  margin-bottom: 2rem;
+}
+
+.quoteText {
+  position: relative;
+  font-size: 2rem;
+  line-height: 1.6;
+  color: #2c3e50;
+  margin: 0 0 2rem 0;
+  padding: 2rem 2rem 2rem 4rem;
+  font-style: normal;
+  font-weight: 400;
+  quotes: '\201C' '\201D' '\2018' '\2019';
+  text-align: left;
+}
+
+.quoteText::before {
+  content: open-quote;
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 8rem;
+  line-height: 1;
+  color: #3498db;
+  opacity: 0.2;
+  font-family: Georgia, serif;
+  z-index: 0;
+}
+
+.quoteText::after {
+  content: close-quote;
+  position: absolute;
+  right: 2rem;
+  bottom: -1rem;
+  font-size: 8rem;
+  line-height: 1;
+  color: #3498db;
+  opacity: 0.2;
+  font-family: Georgia, serif;
+  visibility: visible;
+  z-index: 0;
+}
+
+.quoteAuthor {
+  font-size: 1.25rem;
+  color: #7f8c8d;
+  font-weight: 500;
+  margin: 2rem 0 0 0;
+  position: relative;
+  padding-right: 2rem;
+  text-align: right;
+  font-style: normal;
+}
+
+.quoteAuthor::before {
+  content: '— ';
+  color: #bdc3c7;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+  align-items: center;
+}
+
+.favoriteButton,
+.copyButton {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  max-width: 300px;
+}
+
+.favoriteButton {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.favoriteButton:hover {
+  background-color: #e0e0e0;
+}
+
+.favoriteButton.favorited {
+  background-color: #ffebee;
+  color: #d32f2f;
+}
+
+.copyButton {
+  background-color: #e3f2fd;
+  color: #1565c0;
+}
+
+.copyButton:hover {
+  background-color: #bbdefb;
+}
+
+.backLink {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #3498db;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.backLink:hover {
+  color: #1a73e8;
+  text-decoration: underline;
+}
+
+.loading,
+.errorContainer,
+.notFound {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.errorContainer h2,
+.notFound h2 {
+  color: #d32f2f;
+  margin-top: 0;
+}

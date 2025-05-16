@@ -1,0 +1,196 @@
+.favoritesPage {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+
+.header h1 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.backLink {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #3498db;
+  text-decoration: none;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.backLink:hover {
+  text-decoration: underline;
+}
+
+.emptyState {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: #f9f9f9;
+  border-radius: 8px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.emptyState p {
+  color: #555;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.browseLink {
+  display: inline-block;
+  background-color: #3498db;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.browseLink:hover {
+  background-color: #2980b9;
+  text-decoration: none;
+}
+
+.favoritesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.favoriteCard {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-left: 4px solid #3498db;
+  position: relative;
+  overflow: hidden;
+}
+
+.favoriteCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.quoteContent {
+  flex-grow: 1;
+  margin-bottom: 1rem;
+  position: relative;
+  padding-left: 2rem;
+}
+
+.quoteText {
+  position: relative;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #2c3e50;
+  margin: 0 0 1rem 0;
+  padding: 0.5rem 0 0.5rem 2rem;
+  font-style: normal;
+  font-weight: 400;
+  quotes: '\201C' '\201D' '\2018' '\2019';
+  display: flex;
+  line-clamp: 4;
+  flex-direction: column;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: 7.2rem;
+}
+
+.quoteText::before {
+  content: open-quote;
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 3rem;
+  line-height: 1;
+  color: #3498db;
+  opacity: 0.2;
+  font-family: Georgia, serif;
+}
+
+.quoteText::after {
+  content: close-quote;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  font-size: 3rem;
+  line-height: 1;
+  color: #3498db;
+  opacity: 0.2;
+  font-family: Georgia, serif;
+  visibility: visible;
+  transform: translateY(0.5rem);
+}
+
+.quoteAuthor {
+  font-weight: 500;
+  color: #7f8c8d;
+  text-align: right;
+  margin: 0.5rem 0 0 0;
+  font-style: normal;
+  font-size: 0.95rem;
+  position: relative;
+  padding-right: 1rem;
+}
+
+.quoteAuthor::before {
+  content: '— ';
+  color: #bdc3c7;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.removeButton,
+.viewDetails {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.removeButton {
+  background-color: #ffebee;
+  color: #d32f2f;
+  border: 1px solid #ffcdd2;
+}
+
+.removeButton:hover {
+  background-color: #ffcdd2;
+}
+
+.viewDetails {
+  background-color: #f5f5f5;
+  color: #333;
+  border: 1px solid #e0e0e0;
+}
+
+.viewDetails:hover {
+  background-color: #e0e0e0;
+  text-decoration: none;
+}
